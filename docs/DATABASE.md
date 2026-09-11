@@ -1,0 +1,2 @@
+# Database
+MVP tables: `users`, `profiles`, `topic_states`, `plans`, `plan_items`, `attempts`, and `messages`. Foreign keys prevent orphaned student data. Unique email and `(user_id, topic)` constraints support primary query patterns. `topic_states` is the persistent learner model; its mastery is a bounded blend of previous estimate and observed accuracy. Production adds PostgreSQL indexes on `attempts(user_id, topic, created_at)` and separate resources/chunks/vector tables.

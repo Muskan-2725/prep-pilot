@@ -1,0 +1,2 @@
+# Testing
+`tests/test_workflow.py` is an API-level integration test covering signup, onboarding, plan generation, mentor response, practice, wrong attempt evaluation, and persisted learner-state update. A separate test confirms research returns an official source and explicit limited confidence. Run `python -m pytest`. Browser screenshot/manual testing verifies the local UI renders; no live LLM, external research, PostgreSQL, or load tests have been performed.

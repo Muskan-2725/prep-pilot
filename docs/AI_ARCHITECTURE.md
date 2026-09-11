@@ -1,0 +1,2 @@
+# AI and agent architecture
+The MVP uses deterministic capability routing, not pretend agents. Tutor detects curated topic intent and returns a Socratic next step. Practice selects the lowest-mastery topic. Evaluation classifies wrong answers as conceptual or time-management errors and updates mastery. Planner reads persisted states and creates a new explainable version. Research only emits source-backed, limited claims. A production LLM adapter would receive retrieved chunks, profile summary, and tool-limited task schema; it must return citations or abstain.

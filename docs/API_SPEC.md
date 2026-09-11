@@ -1,0 +1,2 @@
+# API
+Public: `GET /health`; `POST /api/auth/signup` `{email,password}`; `POST /api/auth/login` `{email,password}`. Authenticated bearer-token endpoints: `PUT /api/onboarding`, `GET /api/profile`, `POST /api/plans/generate`, `GET /api/practice?topic=`, `POST /api/attempts` `{question_id,selected,elapsed_seconds?}`, `POST /api/mentor` `{message}`, and `GET /api/research?q=`. Errors are JSON `{detail}`. Tokens expire in 24 hours; logout is client-side token removal in this MVP.

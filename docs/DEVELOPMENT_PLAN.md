@@ -1,0 +1,2 @@
+# Development roadmap
+1. **Completed:** Stage 0 analysis, MVP spec, modular-monolith architecture, schema, runnable scaffold, and tested adaptive loop. 2. Add migrations, PostgreSQL/pgvector, and provider-neutral LLM adapter. 3. Add approved web-research ingestion, source review, retrieval evaluation corpus, question authoring, and richer dashboards. 4. Add rate limiting, revocation/session store, E2E browser tests, telemetry backend, and deployment only after approval.

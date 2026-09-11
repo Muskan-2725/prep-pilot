@@ -1,0 +1,2 @@
+# Security
+Passwords use PBKDF2-SHA256 with unique 16-byte salt and 310,000 iterations. Tokens are HMAC signed and expire in 24 hours. API routes authenticate before user data access; SQL uses bound parameters; JSON is validated; the UI inserts API output with `textContent`. Secrets are environment variables and `.env` is ignored. Before production add HTTPS, secure HttpOnly cookies/CSRF protection, token revocation, rate limiting, CSP, audit logging, dependency scanning, and a managed secret store. Never grant retrieved content tool execution rights.
