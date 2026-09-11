@@ -1,2 +1,3 @@
 # Testing
-`tests/test_workflow.py` is an API-level integration test covering signup, onboarding, plan generation, mentor response, practice, wrong attempt evaluation, and persisted learner-state update. A separate test confirms research returns an official source and explicit limited confidence. Run `python -m pytest`. Browser screenshot/manual testing verifies the local UI renders; no live LLM, external research, PostgreSQL, or load tests have been performed.
+
+`python -m pytest -q` exercises the WSGI API and temporary SQLite databases. Tests cover signup, onboarding-driven initial focus, weak-topic practice, incorrect evaluation, persisted learner-state update, adaptive plan priority, mentor context, recovery after correct performance, authentication, user isolation, invalid input, zero-history state, exam countdown, and honest research fallback. Browser E2E automation and load/security testing remain future work.

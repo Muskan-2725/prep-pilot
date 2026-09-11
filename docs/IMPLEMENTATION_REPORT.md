@@ -1,13 +1,10 @@
-# Implementation report
-## Acceptance status
-| Capability | Implemented | Tested | Limitation |
-|---|---:|---:|---|
-| Signup/login | Yes | Yes | Stateless token; no server-side logout/revocation |
-| GATE CSE onboarding | Yes | Yes | One exam only |
-| Personalized plan | Yes | Yes | One-week allocation heuristic |
-| Tutor | Yes | Yes | Curated deterministic responses, not an LLM |
-| Practice/evaluation | Yes | Yes | Four-question seed bank |
-| Learner memory/adaptation | Yes | Yes | Simple mastery blend |
-| Research/grounding | Yes | Yes | Offline official link, no live crawl |
+# V1 implementation report
 
-No production deployment, real LLM, vector database, live research, or full E2E browser automation has been claimed or performed.
+## Real V1 capabilities
+- Persistent SQLite learner model: profile, exam goal/date/hours, topic confidence/mastery/trend, attempts, mistake type, plans and messages.
+- Browser practice flow with answer selection, confidence, self-reported mistake taxonomy, evaluation feedback, and an updated dashboard/plan.
+- Adaptive topic priority: planner/practice/mentor use the same learner state; priority uses mastery, onboarding confidence, and recent topic accuracy.
+- Honest research fallback: no live search is claimed. A static official GATE source is returned with `confidence: unavailable`.
+
+## Explicit limits
+There is no LLM, live web retrieval, embeddings, vector search, document ingestion, or model-generated citation in this zero-cost local V1. Mentor answers are deterministic and expose that mode. Questions are authored seed data, not previous-year paper content. There is no server-side logout/revocation or public deployment configuration.
