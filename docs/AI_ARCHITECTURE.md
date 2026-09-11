@@ -1,0 +1,3 @@
+# AI and knowledge architecture
+
+V1 deliberately separates deterministic learner services from future model integration. `mentor()` consumes a structured dashboard context (focus, mastery, attempts) and returns a deterministic learner-aware fallback; no LLM is called. `research()` is a provider boundary with an explicit unavailable fallback and an official source record. The SQLite `questions` table is the usable knowledge foundation: it holds topic, subject, difficulty, type, options, explanation and source metadata. Future ingestion/embedding/vector retrieval must preserve source metadata, use retrieved context only, and abstain when evidence is insufficient.

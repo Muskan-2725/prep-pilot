@@ -1,0 +1,3 @@
+# Database
+
+SQLite is the V1 source of learner truth. `users` and `profiles` store identity and onboarding. `topic_states` stores per-user topic mastery, confidence, counters, last mistake and trend. `questions` contains structured authored practice. `attempts` is the immutable practice history. `plans`/`plan_items` store generated plan versions and reasons; `messages` keeps mentor exchanges. Foreign keys are enabled per connection; unique user email, user/topic state, and user/plan version constraints prevent key duplication. Indexes support recent attempt and message queries. Schema creation is bootstrap-only V1 behavior; a migration system is still required before production.

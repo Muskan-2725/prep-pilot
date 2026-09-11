@@ -1,0 +1,4 @@
+# Architecture
+Browser UI → WSGI API (`app/server.py`) → deterministic application services (`app/core.py`) → SQLite. Services isolate authentication, planning, tutoring, practice, evaluation, learner state, and grounded research. This is a modular monolith: a pragmatic MVP alternative to premature microservices. At 10× load, run multiple API workers, move SQLite to PostgreSQL, and move research/indexing to background jobs.
+
+The UI is deliberately plain HTML/CSS/JS rather than React because it is a one-page demonstrator with no external dependency available in the isolated environment. The backend boundary remains REST, so a React/Next.js client can replace it without service rewrites. Python standard library was selected for a verifiable zero-cost runnable MVP; FastAPI/PostgreSQL/pgvector remain the documented production evolution.
